@@ -1,0 +1,32 @@
+entity.racecar2.name=Race Car
+item.blackcar.name=Black Race Car
+item.redcar.name=Red Race Car
+item.greencar.name=Green Race Car
+item.browncar.name=Brown Race Car
+item.bluecar.name=Blue Race Car
+item.purplecar.name=Purple Race Car
+item.cyancar.name=Cyan Race Car
+item.lightgraycar.name=Light Gray Car
+item.graycar.name=Gray Car
+item.pinkcar.name=Pink Car
+item.limecar.name=Lime Car
+item.yellowcar.name=Yellow Car
+item.lightbluecar.name=Light Blue Car
+item.magentacar.name=Magenta Car
+item.orangecar.name=Orange Car
+item.whitecar.name=White Car
+item.addictallica85car.name=#13 Addictallica85
+item.jonesto95car.name=#62 Jonesto95
+item.nonameminicar.name=#25 Nonamemini
+item.rovenamicar.name=#60 Rovenami
+item.serialskanker24car.name=#72 SerialSkanker24
+item.tbbadaboomcar.name=#8 T_B_Badaboom
+item.death7720car.name=#77 death7720
+item.scienceprimocar.name=#49 scienceprimo
+item.
+
+tile.carjumpblock.name=Jump Pad
+tile.carboostblock.name=Boost Pad
+tile.carslowblock.name=Slow Pad
+tile.carfinishblock.name=Finish Line
+tile.charcoalblock.name=Charcoal Block

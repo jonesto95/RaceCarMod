@@ -1,0 +1,21 @@
+{
+    "result":
+    {
+        "item": "race:charcoalblock"
+    },
+    "pattern":
+    [
+        "CCC",
+        "CCC",
+        "CCC"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "C":
+        {
+            "item": "minecraft:coal",
+            "data": 1
+        }
+    }
+}
