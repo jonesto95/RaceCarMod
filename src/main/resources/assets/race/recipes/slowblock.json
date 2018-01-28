@@ -1,0 +1,27 @@
+{
+    "result":
+    {
+        "item": "race:carslowblock",
+        "count": 9
+    },
+    "pattern":
+    [
+        "YYY",
+        "RRR",
+        "YYY"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "Y":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 11
+        },
+        "R":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 15
+        }
+    }
+}

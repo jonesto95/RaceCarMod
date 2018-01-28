@@ -1,0 +1,24 @@
+{
+    "result":
+    {
+        "item": "race:tire"
+    },
+    "pattern":
+    [
+        "III",
+        "ImI",
+        "III"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "m":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "I":
+        {
+            "item": "race:tirerubber"
+        }    
+    }
+}

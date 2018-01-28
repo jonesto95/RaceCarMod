@@ -22,6 +22,7 @@ public class RaceCarMod {
 	
 	@EventHandler public static void preInit(FMLPreInitializationEvent e)
 	{
+		proxy.preInitRegistries();
 		// RegistryHandler.preInitRegistries();
 	}
 	

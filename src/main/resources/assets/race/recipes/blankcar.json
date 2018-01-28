@@ -1,0 +1,28 @@
+{
+    "result":
+    {
+        "item": "race:blankcar"
+    },
+    "pattern":
+    [
+        "   ",
+        "TCT",
+        "TRT"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "C":
+        {
+            "item": "race:chassis"
+        },
+        "T":
+        {
+            "item": "race:tire"
+        },
+        "R":
+        {
+            "item": "race:redstonecarengine"
+        }
+    }
+}

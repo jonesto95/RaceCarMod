@@ -1,0 +1,35 @@
+{
+    "result":
+    {
+        "item": "race:scienceprimocar"
+    },
+    "pattern":
+    [
+        "ABC",
+        " E ",
+        "   "
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "E":
+        {
+            "item": "race:blankcar"
+        },
+        "A":
+        {
+            "item": "minecraft:dye",
+            "data": 15
+        },
+        "B":
+        {
+            "item": "minecraft:dye",
+            "data": 11
+        },
+        "C":
+        {
+            "item": "minecraft:dye",
+            "data": 0
+        }    
+    }
+}

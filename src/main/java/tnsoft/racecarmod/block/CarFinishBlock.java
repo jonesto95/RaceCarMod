@@ -18,15 +18,15 @@ public class CarFinishBlock extends Block implements IHasModel {
 		super(Material.WOOD);
 		setUnlocalizedName("carfinishblock");
 		setRegistryName(Reference.MODID + ":carfinishblock");
-		setCreativeTab(CreativeTabs.MISC);
+		setCreativeTab(ModItems.racingTab);
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}
 
 	@Override
-	public void registerModels() {
+	public void registerModels()
+	{
 		RaceCarMod.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
-		
 	}
 
 }

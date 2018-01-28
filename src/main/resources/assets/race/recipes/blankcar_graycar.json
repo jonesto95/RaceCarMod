@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients":
+    [
+        {
+            "item": "race:graycar"
+        }
+    ],
+    "result":
+    {
+        "item": "race:blankcar"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "result":
+    {
+        "item": "race:redstonecarengine"
+    },
+    "pattern":
+    [
+        "PPP",
+        "ORO",
+        "PPP"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "P":
+        {
+            "item": "minecraft:piston"
+        },
+        "R":
+        {
+            "item": "minecraft:redstone_block"
+        },
+        "O":
+        {
+            "item": "minecraft:obsidian"
+        }
+    }
+}

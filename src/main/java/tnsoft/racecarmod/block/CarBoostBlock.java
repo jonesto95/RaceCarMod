@@ -18,7 +18,7 @@ public class CarBoostBlock extends Block implements IHasModel {
 		super(Material.WOOD);
 		setUnlocalizedName("carboostblock");
 		setRegistryName(Reference.MODID + ":carboostblock");
-		setCreativeTab(CreativeTabs.MISC);
+		setCreativeTab(ModItems.racingTab);
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}

@@ -19,7 +19,6 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import tnsoft.racecarmod.RaceCarMod;
-import tnsoft.racecarmod.entity.EntityRaceCar;
 import tnsoft.racecarmod.entity.EntityRaceCar2;
 import tnsoft.racecarmod.init.ModItems;
 
@@ -32,7 +31,7 @@ public class CarSpawn extends Item implements IHasModel {
 		this.driver = driver;
 		setUnlocalizedName(name);
 		setRegistryName("race:" + name);
-		setCreativeTab(CreativeTabs.MISC);
+		setCreativeTab(ModItems.racingTab);
 		ModItems.ITEMS.add(this);
 	}
 	

@@ -14,5 +14,6 @@ public class ModBlocks {
 	public static final Block CAR_BOOST = new CarBoostBlock();
 	public static final Block CAR_SLOW = new CarSlowBlock();
 	public static final Block CAR_FINISH = new CarFinishBlock();
+	public static final Block REDSTONE_ENGINE = new RedstoneCarEngine();
 	public static final Block CHARCOAL_BLOCK = new CharcoalBlock();
 }

@@ -1,0 +1,32 @@
+{
+    "result":
+    {
+        "item": "race:carjumpblock",
+        "count": 9
+    },
+    "pattern":
+    [
+        "LML",
+        "MWM",
+        "LML"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 5
+        },
+        "M":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 2
+        },
+        "W":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 0
+        }    
+    }
+}

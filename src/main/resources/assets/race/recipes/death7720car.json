@@ -1,0 +1,35 @@
+{
+    "result":
+    {
+        "item": "race:death7720car"
+    },
+    "pattern":
+    [
+        "ABC",
+        " E ",
+        "   "
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "E":
+        {
+            "item": "race:blankcar"
+        },
+        "A":
+        {
+            "item": "minecraft:dye",
+            "data": 0
+        },
+        "B":
+        {
+            "item": "minecraft:dye",
+            "data": 4
+        },
+        "C":
+        {
+            "item": "minecraft:dye",
+            "data": 0
+        }    
+    }
+}

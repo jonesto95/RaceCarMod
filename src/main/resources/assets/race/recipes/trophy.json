@@ -1,0 +1,24 @@
+{
+    "result":
+    {
+        "item": "race:trophy"
+    },
+    "pattern":
+    [
+        "G G",
+        "GGG",
+        " B "
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "G":
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_block"
+        }
+    }
+}

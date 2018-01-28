@@ -6,6 +6,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import tnsoft.racecarmod.init.ModBlocks;
 import tnsoft.racecarmod.init.ModEntities;
 import tnsoft.racecarmod.init.ModItems;

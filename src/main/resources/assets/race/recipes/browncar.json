@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients":
+    [
+        {
+            "item": "race:blankcar"
+        },
+        {
+            "item": "minecraft:dye",
+            "data": 3
+        }
+    ],
+    "result":
+    {
+        "item": "race:browncar"
+    }
+}

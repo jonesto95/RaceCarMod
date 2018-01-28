@@ -1,0 +1,27 @@
+{
+    "result":
+    {
+        "item": "race:carfinishblock",
+        "count": 4
+    },
+    "pattern":
+    [
+        "WB ",
+        "BW ",
+        "   "
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "W":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 0
+        },
+        "B":
+        {
+            "item": "minecraft:stained_hardened_clay",
+            "data": 15
+        }
+    }
+}

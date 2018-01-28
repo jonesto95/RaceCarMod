@@ -1,0 +1,35 @@
+{
+    "result":
+    {
+        "item": "race:serialskanker24car"
+    },
+    "pattern":
+    [
+        "ABC",
+        " E ",
+        "   "
+    ],
+    "type": "minecraft:crafting_shaped",
+    "key":
+    {
+        "E":
+        {
+            "item": "race:blankcar"
+        },
+        "A":
+        {
+            "item": "minecraft:dye",
+            "data": 0
+        },
+        "B":
+        {
+            "item": "minecraft:dye",
+            "data": 11
+        },
+        "C":
+        {
+            "item": "minecraft:dye",
+            "data": 12
+        }    
+    }
+}

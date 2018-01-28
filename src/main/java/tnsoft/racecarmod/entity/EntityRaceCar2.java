@@ -97,6 +97,7 @@ public class EntityRaceCar2 extends Entity {
 	
 	public static enum Driver
 	{
+		DEFAULT(-1, "default"),
 		BLACK_DEFAULT(0, "black"),
 		RED_DEFAULT(1, "red"),
 		GREEN_DEFAULT(2, "green"),
@@ -121,9 +122,9 @@ public class EntityRaceCar2 extends Entity {
 		T_B_BADABOOM(21, "t_b_badaboom"),		// Tyler
 		ROVENAMI(22, "rovenami"),				// Treck
 		SCIENCEPRIMO(23, "scienceprimo"),		// Russel
-		MATT2092(24, "matt2092");				// Duell
+		MATT2092(24, "matt2092"),				// Duell
 		// Andy
-		// Mitch
+		MITCHSHAW95(26, "mitchshaw95");			// Mitch
 		
 		public final String NAME;
 		private final int METADATA;
@@ -271,6 +272,8 @@ public class EntityRaceCar2 extends Entity {
 	{
 		switch(getDriver())
 		{
+		case DEFAULT:
+			return ModItems.BLANK_CAR;
 		case BLACK_DEFAULT:
 			return ModItems.BLACK_CAR;
 		case ADDICTALLICA85:
@@ -321,6 +324,8 @@ public class EntityRaceCar2 extends Entity {
 			return ModItems.YELLOW_CAR;
 		case MATT2092:
 			return ModItems.MATT2092_CAR;
+		case MITCHSHAW95:
+			return ModItems.MITCHSHAW95_CAR;
 		default:
 			break;
 		}
