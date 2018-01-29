@@ -84,6 +84,8 @@ public class EntityRaceCar2 extends Entity {
 	private int maxPassengers = 2;
 	private float fuelRemaining; 
 	private int timeSinceLine;
+	private boolean hasCrossedLine;
+	private int lapTimer;
 	
 	public static enum Status
 	{
@@ -174,6 +176,7 @@ public class EntityRaceCar2 extends Entity {
 		fuelRemaining = 0;
 		timeSinceLine = 301;
 		isImmuneToFire = true;
+		hasCrossedLine = false;
 	}
 	
 	
@@ -392,6 +395,8 @@ public class EntityRaceCar2 extends Entity {
 				
 		if(timeSinceLine <= 500) 
 			timeSinceLine++;
+		if(hasCrossedLine)
+			lapTimer++;
 		
 		if(canPassengerSteer())
 		{
@@ -445,6 +450,10 @@ public class EntityRaceCar2 extends Entity {
 						applyEntityCollision(entity);
 				}
 			}
+		}
+		else
+		{
+			hasCrossedLine = false;
 		}
 	}
 	
@@ -699,7 +708,6 @@ public class EntityRaceCar2 extends Entity {
 		double d0 = -0.04D;
 		double d1 = hasNoGravity() ? 0.0D : -0.04D;
 		double d2 = 0.0D;
-		momentum = 0.05F;
 		
 		if(previousStatus == EntityRaceCar2.Status.IN_AIR && status != previousStatus && status != EntityRaceCar2.Status.ON_LAND)
 		{
@@ -727,7 +735,9 @@ public class EntityRaceCar2 extends Entity {
 					momentum = 0.45F;
 					break;
 					
-				case IN_AIR: break;
+				case IN_AIR: 
+					momentum = 1;
+					break;
 					
 				case ON_LAND:
 					d2 = 0.65F;
@@ -757,11 +767,13 @@ public class EntityRaceCar2 extends Entity {
 		// Check blocks beneath
 		Block firstBlock = world.getBlockState((new BlockPos(this).down())).getBlock();
 		Block secondBlock = world.getBlockState((new BlockPos(this).down().down())).getBlock();
+		Block thirdBlock = world.getBlockState((new BlockPos(this).down().down().down())).getBlock();
+		Block fourthBlock = world.getBlockState((new BlockPos(this).down().down().down().down())).getBlock();
 		
 		if(firstBlock instanceof CarBoostBlock)
 		{
-			motionX *= 1.1F;
-			motionZ *= 1.1F;
+			motionX *= 1.3F;
+			motionZ *= 1.3F;
 		}
 		else if(firstBlock instanceof CarJumpBlock)
 			motionY = 0.5F;
@@ -771,21 +783,13 @@ public class EntityRaceCar2 extends Entity {
     		motionZ *= 0.1F;
 		}
 		else if(firstBlock instanceof CarFinishBlock)
-		{
-			if(getControllingPassenger() instanceof EntityPlayer && timeSinceLine >= 300)
-			{
-				EntityPlayer passenger = (EntityPlayer)getControllingPassenger();
-				String username = passenger.getName();
-				passenger.sendMessage(new TextComponentString(username + " has crossed the line!"));
-				timeSinceLine = 0;
-			}
-		}
+			crossFinishLine();
 		else
 		{
 			if(secondBlock instanceof CarBoostBlock)
 			{
-				motionX += (double)(MathHelper.sin(-rotationYaw * 0.017453292F) * 1.2F);
-	    		motionZ += (double)(MathHelper.cos(rotationYaw * 0.017453292F) * 1.2F);
+				motionX *= 1.3F;
+				motionZ *= 1.3F;
 			}
 			else if(secondBlock instanceof CarJumpBlock)
 				motionY = 0.5F;
@@ -795,17 +799,35 @@ public class EntityRaceCar2 extends Entity {
 	    		motionZ *= 0.1F;
 			}
 			else if(secondBlock instanceof CarFinishBlock)
+				crossFinishLine();
+			else
 			{
-				if(getControllingPassenger() instanceof EntityPlayer && timeSinceLine >= 300)
-				{
-					EntityPlayer passenger = (EntityPlayer)getControllingPassenger();
-					String username = passenger.getName();
-					passenger.sendMessage(new TextComponentString(username + " has crossed the line!"));
-					timeSinceLine = 0;
-				}
+				if(thirdBlock instanceof CarFinishBlock)
+					crossFinishLine();
+				else if(fourthBlock instanceof CarFinishBlock)
+					crossFinishLine();
 			}
 		}
 		return d1;
+	}
+	
+	
+	private void crossFinishLine()
+	{
+		if(getControllingPassenger() instanceof EntityPlayer && timeSinceLine >= 50)
+		{
+			EntityPlayer passenger = (EntityPlayer)getControllingPassenger();
+			String username = passenger.getName();
+			if(hasCrossedLine)
+				passenger.sendMessage(new TextComponentString(username + " has crossed the line! (Time: " +  lapTimer + ")"));
+			else
+			{					
+				passenger.sendMessage(new TextComponentString(username + " has crossed the line!"));
+				hasCrossedLine = true;
+			}
+			timeSinceLine = 0;
+			lapTimer = 0;
+		}
 	}
 	
 	private void controlRaceCar()
@@ -831,11 +853,19 @@ public class EntityRaceCar2 extends Entity {
 
             rotationYaw += deltaRotation;
 
-            if (forwardInputDown)
-                f += 0.04F;
-
-            if (backInputDown)
-                f -= 0.005F;
+            if(status != EntityRaceCar2.Status.IN_AIR)
+            {
+            	if (forwardInputDown)
+            		f += 0.04F;
+            	
+            	if (backInputDown)
+            		f -= 0.005F;            	
+            }
+            else
+            {
+            	forwardInputDown = false;
+            	backInputDown = false;
+            }
 
             if(jumpInputDown && status != EntityRaceCar2.Status.IN_AIR)
             {

@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import tnsoft.racecarmod.init.ModEntities;
 import tnsoft.racecarmod.util.handlers.RegistryHandler;
 
 public class ClientProxy extends CommonProxy {

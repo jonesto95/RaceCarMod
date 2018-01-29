@@ -24,6 +24,7 @@ public class ModItems {
 	public static final Item CHASSIS = new Chassis();
 	public static final Item TIRE = new Tire();
 	public static final Item TIRE_RUBBER = new TireRubber();
+	public static final Item TROPHY = new Trophy();
 	public static final Item BLANK_CAR = new CarSpawn(EntityRaceCar2.Driver.DEFAULT, "blankcar");
 	public static final Item PINK_CAR = new CarSpawn(EntityRaceCar2.Driver.PINK_DEFAULT, "pinkcar");
 	public static final Item YELLOW_CAR = new CarSpawn(EntityRaceCar2.Driver.YELLOW_DEFAULT, "yellowcar");

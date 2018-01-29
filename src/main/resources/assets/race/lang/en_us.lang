@@ -3,6 +3,7 @@ entity.racecar.name=Race Car
 item.chassis.name=Chassis
 item.tire.name=Tire
 item.tirerubber.name=Tire Rubber
+item.trophy.name=Trophy
 item.blankcar.name=Blank Car
 item.pinkcar.name=Pink Car
 item.yellowcar.name=Yellow Car
